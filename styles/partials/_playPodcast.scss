@@ -1,0 +1,76 @@
+.playPodcast {
+	background-color: #010101;
+	color: $primaryColor;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	@include respond-to('medium') {
+		bottom: inherit;
+		position: static;
+	}
+
+	.flex {
+		min-height: 54px;
+		align-items: center;
+		justify-content: center;
+		div {
+			border-left: 1px solid #272727;
+			border-right: 1px solid #272727;
+			padding: 15px 0;
+			transition: .3s all;
+			&:hover {
+				background: darken($primaryColor, 20);
+			}
+			a {
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+		span {
+			padding: 0 23px;
+			font-size: 1.4rem;
+			letter-spacing: 2px;
+		}
+	}
+
+	.icon {
+		font-size: 2rem;
+		padding: 0 23px;
+		@include respond-to('small') {
+			padding: 0 15px;
+		}
+	}
+
+	.wrapper {
+		max-width: 759px;
+	}
+
+	// .scroller {
+	// 	background-color: #343434;
+	// 	width: 58%;
+	// 	height: 3px;
+	// 	border-radius: 3px;
+	// 	@include respond-to('medium'){
+	// 		width: 36%;
+	// 	}		
+	// 	@include respond-to('small'){
+	// 		width: 20%;
+	// 	}
+	// }
+}
+
+input[type="range"] {
+	-webkit-appearance: none;
+	outline: none;
+	background: #343434;
+	height: 3px;
+	border-radius: 3px;
+	width: 58%;
+	@include respond-to('medium'){
+			width: 36%;
+		}		
+		@include respond-to('small'){
+			width: 20%;
+		}
+}

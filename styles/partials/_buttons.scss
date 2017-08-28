@@ -1,0 +1,87 @@
+button {
+	transition: 0.3s all;
+	border: none;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	&.fullButton {
+		width: 100%;
+	}
+	@include respond-to('medium') {
+		display: block;
+		margin: 0 auto;
+	}
+
+}
+
+button.round {
+	padding: 15px 33px;
+	border-radius: 33px;
+	font-size: 1.4rem;
+}
+
+button.square {
+	padding: 20px;
+	font-size: 1.4rem;
+}
+
+.buttonPrimary {
+	background-color: $primaryColor;
+	color: #fff;
+	&:hover {
+		background: darken($primaryColor, 10);
+	}
+}
+
+.buttonSecondary {
+	background-color: #fff;
+	color: #1a171a;
+	border: 4px solid #fff;
+	&:hover {
+		// background: darken(#fff, 10);
+		background-color: darken($primaryColor, 6);
+		color: #fff;
+		border: 4px solid #fff;
+		border-radius: 40px;
+	}
+}
+
+.buttonTertiary {
+	color: #acabac;
+	background-color: #393639;
+	&:hover {
+		background: lighten(#393639, 10);
+	}
+}
+
+.buttonDonation {
+	text-align: center;
+}
+
+button.playEpisode {
+	background-color: transparent;
+	border: none;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 1.4rem;
+	line-height: 3.2rem;
+	text-align: left;
+	position: relative;
+	padding: 6px 0;
+	border-radius: 30px;
+	margin-top: 5px;
+
+	&:hover {
+		background-color: #fff;
+		color: $primaryColor;
+		padding: 6px 20px;
+		// margin-left: -20px;
+		
+	}
+}
+
+.playEpisode {
+	color:$primaryColor;
+	&:hover {
+		color: darken($primaryColor, 10)
+	}
+}

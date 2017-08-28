@@ -1,0 +1,246 @@
+footer {
+	background-color: $secondaryColor;
+	color: #fff;
+	ul {
+		list-style:none;
+		margin: 0;
+		padding: 0;
+	}
+	a {
+		text-decoration: none;
+		color: #fff;
+	}
+	.flex {
+		justify-content: space-between;
+		flex-wrap: wrap;
+		// @include respond-to('small') {
+		// 	flex-direction: column;
+		// }
+	}
+	.categories {
+		font-family: $secondaryFont;
+	}
+	.archives {
+		font-family: $secondaryFont;
+	}
+	.latestNews {
+		.date {
+			color: #9f9f9f;
+			font-family: $primaryFont;
+			font-size: 1.4rem;
+			line-height: 2.4rem;
+		}
+	}
+	.followUs {	
+	}
+
+}
+
+.footer1 {
+	text-align: left;
+	padding: 75px 0;
+	@include respond-to('medium') {
+		// text-align: center;
+		padding-bottom: 0;
+	}
+	h2 {
+		text-transform: uppercase;
+		font-size: 1.8rem;
+		text-transform: uppercase;
+		margin-bottom: 37px;
+		@include respond-to('medium') {
+			margin-bottom: 15px;
+		}
+	}
+	li {
+		font-family: $secondaryFont;
+		font-size: 1.6rem;
+		line-height: 3.6rem;
+		@include respond-to('medium') {
+			font-size: 1.3rem;
+			line-height: 2.4rem;
+		}
+		a {
+			color: #c8c8c8;
+			&:hover {
+				color: $primaryColor;
+			}
+		}
+	}
+
+	.archives {
+		li {
+			color: #c8c8c8;
+		}
+		.archiveQty {
+			color: #7f7e7f;
+		}
+	}
+
+	.latestNews {
+		li {
+			text-transform: uppercase;
+			line-height: 2.4rem;
+			padding-bottom: 25px;
+			margin-bottom: 23px;
+			@include respond-to('medium') {
+				padding-bottom: 0;
+			}
+			a {
+				color: #d8d8d8;
+				&:hover {
+					color: $primaryColor;
+				}
+			}
+		}
+		.date {
+			display: block;
+		}
+	}
+
+	.followUs {
+		.individual {
+			text-transform: uppercase;
+			padding-bottom: 23px;
+			margin-bottom: 23px;
+			border-bottom: 1px solid #2c292c;
+			&:last-child {
+				border-bottom: none;
+			}
+			@include respond-to('medium') {
+				border-bottom: none;
+				margin-bottom: 0;
+			}
+
+			&.flex {
+				align-items: center;
+				@include respond-to('medium') {
+					flex-direction: column;
+					justify-content: flex-start;
+					align-items: flex-start;
+				}
+			}
+
+			.name {
+				color: $primaryColor;
+				display: block;
+				font-size: 1.8rem;
+				line-height: 2.4rem;
+				letter-spacing: 1px;
+			}
+			.role {
+				display: block;
+				font-size: 1.2rem;
+				color: #7f7e7f;
+				margin-top: 15px;
+				letter-spacing: 1px;
+			}
+			.social {
+				.fa {
+					color: #c8c8c8;
+					margin-left: 15px;
+					&:hover {
+						color: $primaryColor;
+					}
+					@include respond-to('medium') {
+						margin: 10px 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.footer2 {
+	// margin-top: 75px;
+	border-top: 1px solid #2c292c;
+	padding-top: 40px;
+
+	.flex {
+		align-items: center;
+		padding: 30px 15px 25px;
+		@include respond-to('small') {
+			flex-direction: column;
+			padding: 15px;
+		}	}
+	.fa {
+		color: #9a999a;
+		margin-right: 35px;
+		&:hover {
+			color: $primaryColor;
+		}
+		@include respond-to('medium') {
+			margin-left: 15px;
+			margin-right: 15px;
+		}
+	}
+	li {
+		display: inline;
+		margin: 0 3px;
+	}
+	.logo {
+		text-align: center;
+	}
+	.socialLink {
+		@include respond-to('medium'){
+			margin: 0 auto 20px;
+			width: 100%;
+			text-align: center;
+		}
+	}
+	.siteMap {
+		text-transform: uppercase;
+		color: #9a999a;
+		letter-spacing: 2px;
+		// li {
+		// 	margin-left: 25px;
+		// }
+		a {
+			color: #9a999a;
+			&:hover {
+				color: $primaryColor;
+			}
+		}
+		@include respond-to('medium'){
+			margin: 0 auto 10px;
+			width: 100%; 
+			text-align: center;
+		}
+	}
+	.copyright {
+		text-align: center;
+		font-family: $secondaryFont;
+		font-size: 1.4rem;
+		line-height: 2.4rem;
+		color: #9a999a;
+		padding-bottom: 40px;
+	}
+}
+
+.categories, .archives, .latestNews, .followUs {
+	flex-basis: calc(25% - 30px);
+	margin: 0 15px;
+	position: relative;
+	li {
+		border-bottom: 1px solid #2c292c;
+		@include respond-to('medium') {
+			border-bottom: none;
+		}
+	}
+	@include respond-to('medium') {
+		flex-basis: calc(50% - 30px);
+		margin-bottom: 40px;
+	}
+	&::before {
+		content: '';
+		height:4px;
+		width: 100%;
+		border-radius: 12px;
+		background-color: rgba(255,255,255,0.2);
+		position: absolute;
+		top: -25px;
+		@include respond-to('medium') {
+			display: none;
+		}
+	}
+}

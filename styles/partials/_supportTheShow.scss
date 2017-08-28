@@ -1,0 +1,67 @@
+.supportTheShow {
+	background-color: $primaryColor;
+	color: #fff;
+	padding: 105px 0 110px;
+	@include respond-to('medium') {
+		padding: 5% 0;
+	}
+	@include respond-to('large') {
+		padding: 5% 0;
+	}
+
+	h1 {
+		text-align: center;
+		font-size: 3.6rem;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		color: #fff;
+	}
+
+	p {
+		font-size: 2.4rem;
+		line-height: 3.2rem;
+		margin: 0 220px;
+		@include respond-to('medium') {
+			font-size: 1.6rem;
+			margin: 20px 5% 40px;
+		}
+		@include respond-to('large') {
+			margin: 40px 20% 60px;
+		}
+	}
+
+	button {
+
+	}
+
+	.wrapper {
+		position: relative;
+		min-height: 200px;
+	}
+
+	.bgDonate {
+		z-index:10;
+		font-size: 25rem;
+		color: rgba(0,0,0,.04);
+		text-transform: uppercase;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		// display: none;
+		@include respond-to ('medium') {
+			font-size: 12rem;
+		}
+		@include respond-to ('small') {
+			font-size: 8rem;
+		}
+	}
+
+	.OverlayContent {
+		z-index: 20;
+		position: relative;
+		// top: 50%;
+		// left: 50%;
+		// transform: translate(-50%, -50%);
+	}
+}

@@ -1,0 +1,168 @@
+.browseEpisodes {
+	background-color:$secondaryColor;
+	color:#fff;
+	padding: 92px 0;
+	@include respond-to ('medium') {
+		padding: 30px 0;
+	}
+
+	.browseSort {
+		text-transform: uppercase;
+		margin: 0 auto 90px;
+		&.flex {
+			justify-content: space-between;
+			@include respond-to('medium') {
+				flex-direction: column;
+				text-align: center;
+			}
+		}
+	}
+	.browse {
+		display: inline-block;
+			h1 {
+			font-size: 2.1rem;
+			letter-spacing: 1px;
+			}
+	}
+
+	.sort {
+		display: inline-block;
+		font-size: 1.4rem;
+		letter-spacing: 3px;
+		position: relative;
+		&::before{
+			content: '';
+			height:4px;
+			width: 100%;
+			border-radius: 4px;
+			background-color: $primaryColor;
+			position: absolute;
+			bottom: -5px;
+			left: 0;
+			@include respond-to('medium') {
+				width: 20%;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: -15px;
+			}
+		}
+		select {
+			border: none;
+			color: #fff;
+			background: none;
+			text-transform: uppercase;
+		}
+		@include respond-to('medium') {
+			margin-top: 20px;
+		}
+
+	}
+
+	// @include respond-to('medium') {
+	// 	padding: 40px 15px;
+	// }
+
+	.episodesList {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		@include respond-to('medium') {
+			flex-direction: column;
+		}
+
+		.episode {
+			flex-basis: calc(50% - 20px);
+			min-height: 350px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			margin-bottom: 60px;
+			padding: 4%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			position: relative;
+			transition: .3s all;
+			// align-items: center;
+			@include respond-to('medium') {
+				// margin-left: 20px;
+				// margin-right: 20px;
+				margin-bottom: 30px;
+				min-height: inherit;
+			}
+		}
+	}
+}
+
+
+
+.episode52 {
+	background: url('../assets/podcast-1.jpg');
+	&:hover {
+		// background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../assets/podcast-1.jpg');
+	}
+}
+.episode51 {background-image: url('../assets/podcast-2.jpg');}
+.episode50 {background-image: url('../assets/podcast-3.jpg');}
+.episode49 {background-image: url('../assets/podcast-4.jpg');}
+.episode48 {background-image: url('../assets/podcast-5.jpg');}
+.episode47 {background-image: url('../assets/podcast-6.jpg');}
+
+
+.seasonNumDuration {
+	position: relative;
+	margin-top: 50px;
+	// text-shadow: 0 0 3px #333;
+	@include respond-to('small'){
+		margin-top: 20px;
+	}
+	&::before {
+		content: '';
+		height:12px;
+		width: 100%;
+		border-radius: 12px;
+		background-color: rgba(255,255,255,0.2);
+		position: absolute;
+		top: -50px;
+		right: 0;
+		@include respond-to('small'){
+			top: -20px;
+			height: 6px;
+		}
+	}
+	&.flex {
+		justify-content: space-between;
+	}
+}
+
+.seasonNum, .duration {
+	color:$primaryColor;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+}
+.seasonNum {}
+.duration {}
+
+.episodeTitle {
+	font-size: 3.2rem;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-weight: 600;
+	margin: 5% 0;
+	text-shadow: 0 0 7px #111;
+	@include respond-to('small') {
+		font-size: 2.4rem;
+	}
+}
+
+.episodeDate {
+	font-size: 1.6rem;
+	font-family: $secondaryFont;
+	text-transform: uppercase;
+	margin-bottom: 5%;
+	text-shadow: 0 0 7px #111;
+}
+
+.browseEpsidoes button {
+
+}

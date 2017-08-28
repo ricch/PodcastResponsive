@@ -1,0 +1,101 @@
+.aboutUs {
+	padding: 92px 0;
+	@include respond-to ('medium') {
+		padding: 30px 0;
+	}
+	.sectionTitle {
+		font-size: 3.2rem;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin-bottom: 80px;
+		@include respond-to('medium') {
+			text-align: center;
+			margin: 20px 0;
+		}
+	}
+	.individual {
+		// align-items: center;
+		justify-content: space-between;
+		margin-bottom: 8%;
+		@include respond-to('medium') {
+			flex-direction: column;
+		}
+		&:nth-of-type(even) {
+			flex-direction: row-reverse;
+			@include respond-to('medium') {
+				flex-direction: column;
+			}	
+		}
+		&:nth-of-type(odd) .bio {
+			text-align: right;
+			@include respond-to ('medium') {
+				text-align: left;
+			}
+		}
+		.bio {
+			@include respond-to ('medium') {
+				text-align: left;
+			}
+		}
+	}
+}
+
+.profilePic {
+	flex-basis: calc(50% - 40px);
+	margin: 0 20px;
+	text-align: center;
+	@include respond-to('medium'){
+		margin-bottom: 40px;
+	}
+}
+
+.bio {
+	flex-basis: calc(50% - 40px);
+	margin: 0 20px;
+	h1 {
+		color: $primaryColor;
+		text-transform: uppercase;
+		font-size: 4.8rem;
+		font-weight: 600;
+		letter-spacing: 2px;
+		margin-bottom: 6%;
+		margin-top: 4%;
+		@include respond-to('medium') {
+			font-size: 3.2rem;
+		}
+
+		position: relative;
+		&::before {
+			content: '';
+			height:12px;
+			width: 100%;
+			border-radius: 12px;
+			background-color: rgba(0,0,0,0.08);
+			position: absolute;
+			top: -35px;
+			right: 0;
+		}
+	}
+	h2 {
+		text-transform: uppercase;
+		font-family: $secondaryFont;
+		font-size: 1.6rem;
+		letter-spacing: 3px;
+		font-weight: 600; 
+		text-transform: uppercase;
+		margin-bottom: 8%;
+	}
+	p {
+		font-family: $secondaryFont;
+		font-size: 1.8rem;
+		line-height: 3.0rem;
+		color: #9b9a9b;
+	}
+	.fa {
+		color: #000;
+		margin-right: 12px;
+		&:hover {
+			color: $primaryColor;
+		}
+	}
+}

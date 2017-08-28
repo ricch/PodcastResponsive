@@ -1,0 +1,19 @@
+@import "partials/setup";
+@import "partials/variables";
+
+// 
+@import "partials/mixins";
+@import "partials/global";
+
+// Semantic Structure
+@import "partials/nav";
+@import "partials/header";
+@import "partials/footer";
+
+@import "partials/buttons";
+
+// Individual Page Styling
+@import "partials/playPodcast";
+@import "partials/episodes";
+@import "partials/aboutUs";
+@import "partials/supportTheShow";

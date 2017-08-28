@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Design provided by HackerYou -->
+	<meta charset="UTF-8">
+	<title>Richard Chin Project 2</title>
+	<link rel="stylesheet" href="styles/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|Roboto:100,300,400,500,700,900" rel="stylesheet">
+	<script src="https://use.fontawesome.com/be7cb9fabf.js"></script>
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link type="image/png" href="assets/favicon.png" rel="icon">
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+	<!-- goToByScroll -->
+	<!-- Provided by Stack Overflow -->
+	<script>
+		function goToByScroll(id){
+			jQuery('html,body').animate({scrollTop: jQuery("#"+id).offset().top },'slow');
+		}
+	</script>
+
+
+</head>
+<body>
+
+<header>
+	<div class="topHeader wrapper">
+		<div class="logo">
+			<img src="assets/logo.png" alt="Soundbyte">
+		</div>
+
+		<input type="checkbox" id="toggle" name="toggle">
+		
+		<nav>
+			<ul class="nav">
+				<li><a href="#">Home</a></li>
+				<li><a href="javascript:void(0)" onclick="goToByScroll('anchor_aboutUs')">About</a></li>
+				<li><a href="javascript:void(0)" onclick="goToByScroll('anchor_episodes')">Episodes</a></li>
+				<li><a href="#">News</a></li>
+				<li><a href="#">Shop</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="javascript:void(0)" onclick="goToByScroll('anchor_donate')" class="donate">Donate</a></li>
+			</ul>
+		</nav>	
+
+		<label for="toggle" class="mobileMenu"><i class="fa fa-bars fa-3x"></i><i class="fa fa-times fa-3x" aria-hidden="true"></i></label>
+	</div>
+
+	<div class="hero wrapper flex">
+		<div class="liveBroadcast">
+			<h1>A Podcast about tacos and Disney World by Drew Minns. </h1>
+			<p>Live Broadcast Wedsnesday @ 9pm ET </p>
+			<hr>
+			<button class="round buttonPrimary">Subscribe</button>
+			<div class="socialIcons">
+				<a href="#"><i class="fa fa-rss fa-2x" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-apple fa-2x" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-soundcloud fa-2x" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+			</div>
+		</div>
+
+		<div class="latestEpisode">
+			<div class="seasonNumDuration flex">
+				<span class="seasonNum">Season 3</span> <span class="duration"><i class="icon ion-clock"></i> 59 Mins</span>
+			</div>
+			<h1>Episode 53: Artist Corner with Justin</h1>
+			<div class="date">October 11, 2015</div>
+			<button class="playEpisode"><i class="fa fa-play" aria-hidden="true"></i> Play Episode</button>
+			<p>In this episode...behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove...</p>
+		</div>
+	</div>
+
+	<div class="playPodcast">
+		<div class="wrapper flex">
+			<div><a href="#"><i class="icon ion-ios-play-outline"></i></a></div>
+			<span>00:00</span> <!-- <span class="scroller"></span> --><input type="range" value="0" name="levelOfCheesiness"> <span>--:--</span>
+			<div><a href="#"><i class="icon ion-volume-high"></i></a></div>
+		</div>
+	</div>
+</header>
+
+<a class="anchor" id="anchor_episodes" name="anchor_episodes"></a>
+<section class="browseEpisodes">
+	<div class="wrapper browseSort flex">
+		<div class="browse">
+			<h1 class="sectionTitle">Browse Episodes</h1>
+		</div>
+		<div class="sort">
+			<!-- All -->
+			<select name="levelOfSpiciness">
+				<option value="Season1">Season 1</option>
+				<option value="Season2">Season 2</option>
+				<option value="Season3">Season 3</option>
+				<option value="SeasonAll" selected>ALL</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="episodesList wrapper">
+		<!-- <a href="#"> -->
+		<div class="episode episode52">
+			<div class="seasonNumDuration flex">
+				<span class="seasonNum">Season 3</span> <span class="duration"><i class="icon ion-clock"></i> 59 Mins</span>
+			</div>
+			<div class="episodeTitle">
+				Episode 52: Chipotle Peppers
+			</div>
+			<div class="episodeDate">
+				October 11, 2015
+			</div>
+			<button class="playEpisode">
+				<i class="fa fa-play" aria-hidden="true"></i> Play Episode
+			</button>
+		</div>
+		<!-- </a> -->
+		<!-- End Episode 52 -->
+
+		<div class="episode episode51">
+			<div class="seasonNumDuration flex">
+				<span class="seasonNum">Season 3</span> <span class="duration"><i class="icon ion-clock"></i> 59 Mins</span>
+			</div>
+			<div class="episodeTitle">
+				Episode 51: Space Mountain vs. The Teacups
+			</div>
+			<div class="episodeDate">
+				October 11, 2015
+			</div>
+			<button class="playEpisode">
+				<i class="fa fa-play" aria-hidden="true"></i> Play Episode
+			</button>
+		</div> <!-- End Episode 51 -->
+
+		<div class="episode episode50">
+			<div class="seasonNumDuration flex">
+				<span class="seasonNum">Season 3</span> <span class="duration"><i class="icon ion-clock"></i> 59 Mins</span>
+			</div>
+			<div class="episodeTitle">
+				Episode 50: In Which Drew Eats 10 Tacos
+			</div>
+			<div class="episodeDate">
+				October 11, 2015
+			</div>
+			<button class="playEpisode">
+				<i class="fa fa-play" aria-hidden="true"></i> Play Episode
+			</button>
+		</div> <!-- End Episode 50 -->
+
+		<div class="episode episode49">
+			<div class="seasonNumDuration flex">
+				<span class="seasonNum">Season 3</span> <span class="duration"><i class="icon ion-clock"></i> 59 Mins</span>
+			</div>
+			<div class="episodeTitle">
+				Episode 49: The Time I Met Dug at Disney World
+			</div>
+			<div class="episodeDate">
+				October 11, 2015
+			</div>
+			<button class="playEpisode">
+				<i class="fa fa-play" aria-hidden="true"></i> Play Episode
+			</button>
+		</div> <!-- End Episode 49 -->
+
+		<div class="episode episode48">
+			<div class="seasonNumDuration flex">
+				<span class="seasonNum">Season 3</span> <span class="duration"><i class="icon ion-clock"></i> 59 Mins</span>
+			</div>
+			<div class="episodeTitle">
+				Episode 48: The Best Tacos at Disney World
+			</div>
+			<div class="episodeDate">
+				October 11, 2015
+			</div>
+			<button class="playEpisode">
+				<i class="fa fa-play" aria-hidden="true"></i> Play Episode
+			</button>
+		</div> <!-- End Episode 48 -->
+
+		<div class="episode episode47">
+			<div class="seasonNumDuration flex">
+				<span class="seasonNum">Season 3</span> <span class="duration"><i class="icon ion-clock"></i> 59 Mins</span>
+			</div>
+			<div class="episodeTitle">
+				Episode 47: Interview with a Taco Artist
+			</div>
+			<div class="episodeDate">
+				October 11, 2015
+			</div>
+			<button class="playEpisode">
+				<i class="fa fa-play" aria-hidden="true"></i> Play Episode
+			</button>
+		</div> <!-- End Episode 47 -->
+	</div>
+	<div class="wrapper">
+		<button class="square fullButton buttonTertiary">Load More</button>
+	</div>
+</section>
+	
+<a class="anchor" id="anchor_aboutUs" name="anchor_aboutUs"></a>
+<section class="aboutUs">
+	<div class="wrapper">
+		<h1 class="sectionTitle">About Us</h1>
+
+		<div class="individual flex">
+			<div class="profilePic">
+				<img src="assets/about-1.jpg" alt="Drew Minns">
+			</div>
+			<div class="bio">
+				<h1>Drew Minns</h1>
+				<h2>Designer / Developer</h2>
+				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove...</p>
+				<a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+			</div>
+		</div>
+
+		<div class="individual flex">
+			<div class="profilePic">
+				<img src="assets/about-2.jpg" alt="Vic Vinegar">
+			</div>
+			<div class="bio">
+				<h1>Vic Vinegar</h1>
+				<h2>Designer / Developer</h2>
+				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove...</p>
+				<a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<a class="anchor" id="anchor_donate" name="anchor_donate"></a>
+<section class="supportTheShow">
+	<div class="wrapper">
+		<div class="OverlayContent">
+			<h1>Support the show</h1>
+			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named.</p>
+			<div class="buttonDonation">
+				<button class="round buttonSecondary">Make a Donation</button>
+			</div>
+		</div>
+
+		<div class="bgDonate">Donate</div>
+	</div>
+</section>
+
+<footer class="footer1">
+	<div class="wrapper flex">
+		<div class="categories">
+			<h2>Categories</h2>
+			<ul>
+				<li><a href="#">Season 3</a></li>
+				<li><a href="#">Season 2</a></li>
+				<li><a href="#">Season 1</a></li>
+			</ul>
+		</div>
+		<div class="archives">
+			<h2>Archives</h2>
+			<ul>
+				<li><a href="#">October 2015 <span class="archiveQty">(2)</span></a></li>
+				<li><a href="#">September 2015 <span class="archiveQty">(3)</span></a></li>
+				<li><a href="#">August 2015 <span class="archiveQty">(2)</span></a></li>
+			</ul>
+		</div>
+		<div class="latestNews">
+			<h2>Latest News</h2>
+			<ul>
+				<li><a href="#">Designing websites for all devices
+				<span class="date">Nov 4, 2015</span></a></li>
+				<li><a href="#">New guests Announced for November
+				<span class="date">Nov 4, 2015</span></a></li>
+				<li><a href="#">Designing websites for all devices
+				<span class="date">Nov 4, 2015</span></a></li>
+			</ul>
+		</div>
+		<div class="followUs">
+			<h2>Follow Us</h2>
+			<div class="individual flex">
+				<div>
+					<span class="name">Drew Minns</span> <span class="role">Designer / Developer</span>
+				</div>
+				<div class="social">
+					<a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+				</div>
+			</div>
+			<div class="individual flex">
+				<div>
+					<span class="name">Vic Vinegar</span> <span class="role">Designer / Developer</span>
+				</div>
+				<div class="social">
+					<a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</footer>
+
+<footer class="footer2">
+
+	<div class="wrapper logo">
+		<img src="assets/logo-white.png" alt="SoundByte">
+	</div>
+
+	<div class="wrapper flex">
+		<div class="socialLink">
+			<a href="#"><i class="fa fa-rss fa-2x" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-apple fa-2x" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-soundcloud fa-2x" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+		</div>
+		<div class="siteMap">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="javascript:void(0)" onclick="goToByScroll('anchor_aboutUs')">About</a></li>
+				<li><a href="javascript:void(0)" onclick="goToByScroll('anchor_episodes')">Episodes</a></li>
+				<li><a href="#">News</a></li>
+				<li><a href="#">Shop</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="wrapper copyright">
+		&copy;2015 Developed by HackerYou
+	</div>
+
+</footer>
+
+</body>
+</html>

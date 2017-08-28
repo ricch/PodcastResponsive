@@ -1,0 +1,162 @@
+header {
+	background-image: url('../assets/hero.jpg');
+	background-size: cover;
+	background-position: center center;
+	min-height: 100vh;
+	color: #fff;
+	position: relative;
+	@include respond-to('medium') {
+		min-height: inherit;
+		color: #7f7d7f;
+		background-image: none;
+	}
+	.hero.flex {
+		justify-content: space-between;
+		align-items: center;
+		min-height: calc(100vh - 244px);
+		@include respond-to('medium') {
+			flex-direction: column;
+		}
+
+	}
+
+	.hero {
+	}
+
+	.logo {
+		text-align: center;
+		padding: 30px 0;
+		@include respond-to('medium') {
+			// padding: 20px 0;
+			text-align: left;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	.topHeader {
+		min-height: 122px;
+		position: relative;
+		@include respond-to('medium') {
+			min-height: 60px;
+			// position: relative;
+			position:fixed;
+			background-color: #fff;
+			z-index: 100;
+			width: 100%;
+			box-shadow: 0 0 10px #333;
+		}
+	}
+	
+	.liveBroadcast, .latestEpisode {
+		flex-basis: 40%;
+	}
+
+	.liveBroadcast {
+		line-height: 3.6rem;
+		@include respond-to('medium') {
+				background-image: url('../assets/hero.jpg');
+				background-size: cover;
+				background-position: center center;
+				color: #fff;
+				padding: 80px 10px 10px;
+				margin: 60px -15px 30px;
+				// width: 100%;
+			}
+		h1 {
+			font-size: 3rem;
+			line-height: 1.2;
+			margin-bottom: 55px;
+			// margin-bottom: 11%;
+			@include respond-to('medium') {
+				font-size: 2.8rem;
+				margin-bottom: 20px;
+				text-align: center;
+			}
+		}
+		p {
+			font-size: 2.4rem;
+			@include respond-to('medium') {
+				font-size: 1.6rem;
+				text-align: center;
+			}
+		}
+		hr {
+			margin: 45px 0 50px;
+			border: 0;
+    		height: 1px;
+    		background: #938398;
+    		@include respond-to('medium') {
+    			margin: 30px 0;
+    		}
+		}
+		.socialIcons {
+			display: inline;
+			@include respond-to('medium') {
+				display: block;
+				margin: 10px auto;
+				text-align: center;
+			}
+		}
+	}
+	
+	.liveBroadcast a .fa {
+		margin-left: 20px;
+		color: #fff;
+		@include respond-to('medium') {
+			margin: 0 10px;
+		}
+		&:hover {
+			color: $primaryColor;
+		}
+	}
+
+	.latestEpisode {
+		position: relative;
+		// &::before {
+		// 	content: '';
+		// 	height:12px;
+		// 	width: 100%;
+		// 	border-radius: 12px;
+		// 	background-color: rgba(255,255,255,0.2);
+		// 	position: absolute;
+		// 	top: -35px;
+		// 	@include respond-to('medium') {
+		// 		display: none;
+		// 	}
+		// }
+		h1 {
+			font-size: 3.2rem; 
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			margin: 33px 0 30px;
+			@include respond-to('medium') {
+				font-size: 2.2rem;
+				text-align: center;
+				margin-bottom: 15px;
+				color: $secondaryColor;
+			}
+		}
+		.date {
+			font-size: 1.6rem;
+			font-weight: 600;
+			font-family: $secondaryFont;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			@include respond-to('medium') {
+				text-align: center;
+				color: $secondaryColor;
+			}
+		}
+		p {
+			font-size: 1.8rem;
+			line-height: 2.8rem;
+			font-family: $secondaryFont;
+			@include respond-to('medium') {
+				font-size: 1.6rem;
+				text-align: center;
+			}
+		}
+	}
+}
